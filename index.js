@@ -22,5 +22,5 @@ elixir.extend('react', function(src, dest) {
             buffer = buffer.pipe(rename(path.basename(dest)));
 
         buffer.pipe(gulp.dest(path.dirname(dest)));
-    });
+    }).watch(src);
 });
